@@ -3,7 +3,6 @@ library(shiny)
 
 shinyUI(fluidPage(
     titlePanel("Personalización Cambio Fase COVID-19"),
-    
     sidebarLayout(
         sidebarPanel(
             width = 6,
@@ -110,6 +109,9 @@ no test)",value = FALSE),
         
         mainPanel(width = 4,
                   tabsetPanel(
+                      tabPanel("Intrucciones",
+                               helpText(   a("Enlace al vídeo GPS Fases Desescalada (v2.0) con instrucciones, autor: Dr. Iván Moreno",href="https://www.youtube.com/watch?v=5emyWxLWMyU&feature=youtu.be")
+                               )),
                       tabPanel(
                           "Resultado",
                           textOutput("puntos_output2"),
